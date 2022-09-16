@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Musique pour Christ</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="oneMusic-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="oneMusicNav">
+
+                        <!-- Nav brand -->
+                        <a href="index.html" class="nav-brand"><img src="MSA_Logo.jpg" alt=""></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                           
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Acceuil</a></li>
+                                    <li><a href="albums-store.html">Albums</a></li>
+                                    <li><a href="#">Pages</a>
+                                        <ul class="dropdown">
+                                            <li><a href="index.html">Acceuil</a></li>
+                                            <li><a href="albums-store.html">Albums</a></li>
+                                            <li><a href="event.html">Evènements</a></li>
+                                            <li><a href="blog.html">Nouvelles</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="elements.html">Elements</a></li>
+                                            <li><a href="login.html">Se connecter</a></li>
+                                            <li><a href="#">Menu déroulant</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#">Même liste déroulante</a></li>
+                                                    <li><a href="#">Même liste déroulante</a></li>
+                                                    <li><a href="#">Même liste déroulante</a></li>
+                                                    <li><a href="#">Même liste déroulante</a>
+                                                        <ul class="dropdown">
+                                                            <li><a href="#">Profondément déroulant</a></li>
+                                                            <li><a href="#">Profondément déroulant</a></li>
+                                                            <li><a href="#">Profondément déroulant</a></li>
+                                                            <li><a href="#">Profondément déroulant</a></li>
+                                                            <li><a href="#">Profondément déroulant</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">Même liste déroulante</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="event.html">Evènements</a></li>
+                                    <li><a href="blog.html">Nouvelles</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+
+                                    <li><a href="login.html">Se connecter</a></li>
+                                    <li><a href="inscription.html">S'inscrire</a></li>
+                                </ul>
+
+                                <!-- Login/Register & Cart Button -->
+                                <div class="login-register-cart-button d-flex align-items-center">
+                                    <!-- Login/Register 
+                                    <div class="login-register-btn mr-50">
+                                        <li><a href="#"></a>
+                                        <ul class="dropdown">
+                                            <li><a href="login.html">Se connecter</a></li>
+                                            <li><a href="inscription.html">S'inscrire</a></li>
+                                        </ul>
+                                    </li>
+                                    </div>
+                                    -->
+
+                                    <!-- Cart Button -->
+                                    <div class="cart-btn">
+                                        <p><span class="icon-shopping-cart"></span> <span class="quantity">1</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Nav End -->
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Breadcumb Area Start ##### -->
+    <section class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/breadcumb3.jpg);">
+        <div class="bradcumbContent">
+            <p>Regardez ce qu'il y'a de nouveau</p>
+            <h2>Derniers albums</h2>
+        </div>
+    </section>
+    <!-- ##### Breadcumb Area End ##### -->
+
+
+    <!-- ##### Album Catagory Area Start ##### -->
+    <input id="searchbar" onkeyup="search_element()" type="text"
+        name="search" placeholder="rechercher artiste.." style="margin-left: 600px;margin-top: 90px;margin-bottom: 40px;height: 40px;width: 250px;padding:15px;
+     border-radius: 10px;">
+<script type="text/javascript">
+    function search_element() {
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('col-12');
+      
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";                 
+        }
+    }
+}
+</script>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="browse-by-catagories catagory-menu d-flex flex-wrap align-items-center mb-70">
+                        <a href="#" data-filter="*">Parcourir tout</a>
+                        <a href="#" data-filter=".a" class="active">A</a>
+                        <a href="#" data-filter=".b">B</a>
+                        <a href="#" data-filter=".c">C</a>
+                        <a href="#" data-filter=".d">D</a>
+                        <a href="#" data-filter=".e">E</a>
+                        <a href="#" data-filter=".f">F</a>
+                        <a href="#" data-filter=".g">G</a>
+                        <a href="#" data-filter=".h">H</a>
+                        <a href="#" data-filter=".i">I</a>
+                        <a href="#" data-filter=".j">J</a>
+                        <a href="#" data-filter=".k">K</a>
+                        <a href="#" data-filter=".l">L</a>
+                        <a href="#" data-filter=".m">M</a>
+                        <a href="#" data-filter=".n">N</a>
+                        <a href="#" data-filter=".o">O</a>
+                        <a href="#" data-filter=".p">P</a>
+                        <a href="#" data-filter=".q">Q</a>
+                        <a href="#" data-filter=".r">R</a>
+                        <a href="#" data-filter=".s">S</a>
+                        <a href="#" data-filter=".t">T</a>
+                        <a href="#" data-filter=".u">U</a>
+                        <a href="#" data-filter=".v">V</a>
+                        <a href="#" data-filter=".w">W</a>
+                        <a href="#" data-filter=".x">X</a>
+                        <a href="#" data-filter=".y">Y</a>
+                        <a href="#" data-filter=".z">Z</a>
+                        <a href="#" data-filter=".number">0-9</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row oneMusic-albums">
+
+                <!-- Single Album -->
+                <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item t c p">
+                    <div class="single-album">
+                            <img src="alain.jpg" alt="">
+                            <div class="album-info">
+                                <a href="#">
+                                    <h5>Alain Wendinso</h5>
+                                </a>
+                                <p>Kabré</p>
+                            </div>
+                        </div>
+                </div>
+
+                <!-- Single Album -->
+                <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item s e q">
+                    <div class="single-album">
+                            <img src="groove_tour.jpg" alt="">
+                            <div class="album-info">
+                                <a href="#">
+                                    <h5>Rose Bationo</h5>
+                                </a>
+                                <p>Viimab</p>
+                            </div>
+                        </div>
+                </div>
+
+                <!-- Single Album -->
+                <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item w f r">
+                    <div class="single-album">
+                            <img src="serge.jpg" alt="">
+                            <div class="album-info">
+                                <a href="#">
+                                    <h5>Serge Bethsalel</h5>
+                                </a>
+                                <p>I barka</p>
+                            </div>
+                        </div>
+                </div>
+
+                <!-- Single Album -->
+                <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item t g u">
+                    <div class="single-album">
+                            <img src="aristide.jpg" alt="">
+                            <div class="album-info">
+                                <a href="#">
+                                    <h5>Aristide Compaoré</h5>
+                                </a>
+                                <p>Every body sing Alléluia</p>
+                            </div>
+                        </div>
+                </div>
+
+                <!-- Single Album -->
+                <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item d h v">
+                    <div class="single-album">
+                            <img src="groove_tour.jpg" alt="">
+                            <div class="album-info">
+                                <a href="#">
+                                    <h5>Mael Kabré</h5>
+                                </a>
+                                <p>Allons dans la maison de Dieu</p>
+                            </div>
+                        </div>
+                </div>
+
+                <!-- Single Album -->
+                <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item t i x">
+                    <div class="single-album">
+                            <img src="aristide.jpg" alt="">
+                            <div class="album-info">
+                                <a href="#">
+                                    <h5>Aristide Compaoré</h5>
+                                </a>
+                                <p>Jésus sen zom boñg biila</p>
+                            </div>
+                        </div>
+                </div>
+
+                <!-- Single Album -->
+                <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item b j y">
+                    <div class="single-album">
+                        <img src="img/bg-img/a7.jpg" alt="">
+                        <div class="album-info">
+                            <a href="#">
+                                <h5>Soeurs Zabré</h5>
+                            </a>
+                            <p>Songs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Album -->
+                <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item a k z">
+                    <div class="single-album">
+                        <img src="img/bg-img/a8.jpg" alt="">
+                        <div class="album-info">
+                            <a href="#">
+                                <h5>Séraphine Bancé</h5>
+                            </a>
+                            <p>Underground</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Album -->
+                <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item w l number">
+                    <div class="single-album">
+                        <img src="img/bg-img/a9.jpg" alt="">
+                        <div class="album-info">
+                            <a href="#">
+                                <h5>Samson Viodé</h5>
+                            </a>
+                            <p>First</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Album -->
+                <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item d m">
+                    <div class="single-album">
+                        <img src="img/bg-img/a10.jpg" alt="">
+                        <div class="album-info">
+                            <a href="#">
+                                <h5>Simon Sankara</h5>
+                            </a>
+                            <p>The Album</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Album -->
+                <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item t n">
+                    <div class="single-album">
+                        <img src="img/bg-img/a11.jpg" alt="">
+                        <div class="album-info">
+                            <a href="#">
+                                <h5>Chorale féminine de Boulmiougou</h5>
+                            </a>
+                            <p>Unplugged</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Album -->
+                <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item b o">
+                    <div class="single-album">
+                        <img src="img/bg-img/a12.jpg" alt="">
+                        <div class="album-info">
+                            <a href="#">
+                                <h5>Kaike Fusion</h5>
+                            </a>
+                            <p>Songs</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ##### Album Catagory Area End ##### -->
+
+    <!-- ##### Buy Now Area Start ##### -->
+    <div class="oneMusic-buy-now-area mb-100">
+        <div class="container">
+            <div class="row">
+
+                <!-- Single Album Area -->
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="single-album-area">
+                        <div class="album-thumb">
+                            <img src="img/bg-img/b1.jpg" alt="">
+                            <!-- Album Price -->
+                            <div class="album-price">
+                                <p>3000Fcfa</p>
+                            </div>
+                            <!-- Play Icon -->
+                            <div class="play-icon">
+                                <a href="#" class="video--play--btn"><span class="icon-play-button"></span></a>
+                            </div>
+                        </div>
+                        <div class="album-info">
+                            <a href="#">
+                                <h5>Groupe Céleste</h5>
+                            </a>
+                            <p>Radio Station</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Album Area -->
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="single-album-area">
+                        <div class="album-thumb">
+                            <img src="img/bg-img/b2.jpg" alt="">
+                        </div>
+                        <div class="album-info">
+                            <a href="#">
+                                <h5>Samuel Soum</h5>
+                            </a>
+                            <p>Buble Gum</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Album Area -->
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="single-album-area">
+                        <div class="album-thumb">
+                            <img src="img/bg-img/b3.jpg" alt="">
+                        </div>
+                        <div class="album-info">
+                            <a href="#">
+                                <h5>Josué de Poukin</h5>
+                            </a>
+                            <p>The Album</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Album Area -->
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="single-album-area">
+                        <div class="album-thumb">
+                            <img src="img/bg-img/b4.jpg" alt="">
+                        </div>
+                        <div class="album-info">
+                            <a href="#">
+                                <h5>Abel</h5>
+                            </a>
+                            <p>Buble Gum</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="load-more-btn text-center">
+                        <a href="#" class="btn oneMusic-btn">Charger plus <i class="fa fa-angle-double-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Buy Now Area End ##### -->
+
+    <!-- ##### Add Area Start ##### -->
+    <div class="add-area mb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="adds" >
+                        <a href="#"><img src="phanuel.jpg" alt="" style="height: 700px;width: 800px;margin-left: 200px;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Add Area End ##### -->
+
+    <!-- ##### Song Area Start ##### -->
+    <div class="one-music-songs-area mb-70">
+        <div class="container">
+            <div class="row">
+
+                <!-- Single Song Area -->
+                <div class="col-12">
+                    <div class="single-song-area mb-30 d-flex flex-wrap align-items-end">
+                        <div class="song-thumbnail">
+                            <img src="img/bg-img/s1.jpg" alt="">
+                        </div>
+                        <div class="song-play-area">
+                            <div class="song-name">
+                                <p>01. Groupe Céleste</p>
+                            </div>
+                            <audio preload="auto" controls>
+                                <source src="audio/dummy-audio.mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Song Area -->
+                <div class="col-12">
+                    <div class="single-song-area mb-30 d-flex flex-wrap align-items-end">
+                        <div class="song-thumbnail">
+                            <img src="img/bg-img/s2.jpg" alt="">
+                        </div>
+                        <div class="song-play-area">
+                            <div class="song-name">
+                                <p>02. Soeurs Zabré</p>
+                            </div>
+                            <audio preload="auto" controls>
+                                <source src="audio/dummy-audio.mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Song Area -->
+                <div class="col-12">
+                    <div class="single-song-area mb-30 d-flex flex-wrap align-items-end">
+                        <div class="song-thumbnail">
+                            <img src="img/bg-img/s3.jpg" alt="">
+                        </div>
+                        <div class="song-play-area">
+                            <div class="song-name">
+                                <p>03. Kaike Fusion</p>
+                            </div>
+                            <audio preload="auto" controls>
+                                <source src="audio/dummy-audio.mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Song Area -->
+                <div class="col-12">
+                    <div class="single-song-area mb-30 d-flex flex-wrap align-items-end">
+                        <div class="song-thumbnail">
+                            <img src="img/bg-img/s4.jpg" alt="">
+                        </div>
+                        <div class="song-play-area">
+                            <div class="song-name">
+                                <p>04. Phanuel</p>
+                            </div>
+                            <audio preload="auto" controls>
+                                <source src="audio/dummy-audio.mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- ##### Song Area End ##### -->
+
+    <!-- ##### Contact Area Start ##### -->
+   <section class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img" style="background-image: url(img/bg-img/bg-2.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading white wow fadeInUp" data-wow-delay="100ms">
+                        <p>Regardez ce qu'il y'a de nouveau</p>
+                        <h2>Entrer en contact</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <!-- Contact Form Area -->
+                    <div class="contact-form-area">
+                        <form action="#" method="post">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="form-group wow fadeInUp" data-wow-delay="100ms">
+                                        <input type="text" class="form-control" id="name" placeholder="Nom d'utilisateur">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="form-group wow fadeInUp" data-wow-delay="200ms">
+                                        <input type="email" class="form-control" id="email" placeholder="E-mail ou Numéro de téléphone">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group wow fadeInUp" data-wow-delay="300ms">
+                                        <input type="text" class="form-control" id="subject" placeholder="Sujet">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group wow fadeInUp" data-wow-delay="400ms">
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center wow fadeInUp" data-wow-delay="500ms">
+                                    <button class="btn oneMusic-btn mt-30" type="submit">Envoyer <i class="fa fa-angle-double-right"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Contact Area End ##### -->
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row d-flex flex-wrap align-items-center">
+                <div class="col-12 col-md-6">
+                    <a href="#"><img src="MSA_Logo.jpg" alt=""></a>
+                    <p class="copywrite-text"><a href="#"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> SANON B.STEVE ROMUALD <i class="fa fa-heart-o" aria-hidden="true"></i> <a href="https://colorlib.com" target="_blank"></a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="#">Acceuil</a></li>
+                            <li><a href="#">Albums</a></li>
+                            <li><a href="#">Evènements</a></li>
+                            <li><a href="#">Nouvelles</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area Start ##### -->
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+</body>
+
+</html>
